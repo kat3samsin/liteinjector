@@ -21,13 +21,13 @@ AbstractDataSource.prototype.getData = function() {
 Create different concrete implementations.
 ```js
 function SqlDataSource() {}
-SqlDataSource.prototype = Object.create(AbstractDataSource);
+SqlDataSource.prototype = Object.create(AbstractDataSource.prototype);
 SqlDataSource.prototype.getData = function() { 
     return 'SqlDataSource'; 
 }
 
 function AnotherDataSource() {}
-AnotherDataSource.prototype = Object.create(AbstractDataSource.base.prototype);
+AnotherDataSource.prototype = Object.create(AbstractDataSource.prototype);
 AnotherDataSource.prototype.getData = function() { 
     return 'AnotherDataSource'; 
 }
@@ -39,14 +39,15 @@ function DataSourceController(ds) {
     this.ds = ds;
 }
 
-DataSourceController.prototype.getData() {
+DataSourceController.prototype.getData = function() {
     return this.ds.getData();
 };
 ```
 
 ###Putting it all together
 
-Add a dependency. (Use Controller argument name for this)
+Add a dependency. 
+Use controller argument as the first parameter. (key)
 ```js
 liteinjector.addDependency('ds', new SqlDataSource());
 ```
