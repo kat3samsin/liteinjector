@@ -67,3 +67,6 @@ liteinjector.addDependency('ds', new AnotherDataSource());
 var ds = liteinjector.get(DataSourceController);
 ds.getData(); //AnotherDataSource
 ```
+
+Get full sample source here:
+https://raw.githubusercontent.com/kat3samsin/liteinjector/master/sample.js
