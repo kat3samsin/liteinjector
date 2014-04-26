@@ -9,7 +9,7 @@ This library was inspired by Dependency Injection software design pattern that i
 
 ###Setup
 
-Create abstract class
+Create an abstract class.
 ```js
 function AbstractDataSource() {
 }
@@ -18,7 +18,7 @@ AbstractDataSource.prototype.getData = function() {
 };
 ```
 
-Create concrete implementation
+Create different concrete implementations.
 ```js
 function SqlDataSource() {}
 SqlDataSource.prototype = Object.create(AbstractDataSource);
@@ -33,7 +33,7 @@ AnotherDataSource.prototype.getData = function() {
 }
 ```
 
-Create controller
+Create a controller.
 ```js
 function DataSourceController(ds) {
     this.ds = ds;
@@ -44,7 +44,7 @@ DataSourceController.prototype.getData() {
 };
 ```
 
-###Usage
+###Putting it all together
 
 Add dependency, use Controller argument name for this.
 ```js
