@@ -46,7 +46,7 @@ DataSourceController.prototype.getData() {
 
 ###Putting it all together
 
-Add dependency, use Controller argument name for this.
+Add a dependency. (Use Controller argument name for this)
 ```js
 liteinjector.addDependency('ds', new SqlDataSource());
 ```
@@ -55,4 +55,11 @@ Get object with the injected dependency
 ```js
 var ds = liteinjector.get(DataSourceController);
 ds.getData(); //SqlDataSource
+```
+
+Add a new dependency. 
+```js
+liteinjector.addDependency('ds', new AnotherDataSource());
+var ds = liteinjector.get(DataSourceController);
+ds.getData(); //AnotherDataSource
 ```
