@@ -51,7 +51,7 @@ Add a dependency. (Use Controller argument name for this)
 liteinjector.addDependency('ds', new SqlDataSource());
 ```
 
-Get object with the injected dependency
+Get object with the injected dependency.
 ```js
 var ds = liteinjector.get(DataSourceController);
 ds.getData(); //SqlDataSource
