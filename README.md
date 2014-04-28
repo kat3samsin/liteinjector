@@ -1,7 +1,8 @@
 liteinjector
 ============
 
-A super lightweignt IoC container in JS.
+A lightweight IoC container based on Martin Fowler's Inversion of Control Containers and the Dependency Injection pattern.
+http://martinfowler.com/articles/injection.html
 
 This library was inspired by Dependency Injection software design pattern that implements inversion of control and allows a program design to follow the dependency inversion principle.
 
